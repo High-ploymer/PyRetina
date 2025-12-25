@@ -6,6 +6,7 @@
 
 ---
 
+![alt text](image-1.png)
 ## 📖 项目介绍 (Introduction)
 
 **PyRetina** 是一个基于 Python 的神经形态视觉仿真平台。它旨在模拟生物视网膜中**神经节细胞 (Retinal Ganglion Cells, RGCs)** 的信息处理机制，将传统的 RGB 帧数据实时转换为**类事件 (Event-like)** 的稀疏时空信号。

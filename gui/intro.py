@@ -9,8 +9,8 @@ from PyQt6.QtGui import QPixmap, QColor, QPalette, QBrush, QLinearGradient, QFon
 # ================= 配置区域 =================
 # 请将你的图片路径填入此处，或者将图片重命名为对应的名字
 IMAGE_MAP = {
-    "rgb_intro": "PyRetina/slide1.png",  # 对应PPT第一张：传统RGB缺陷
-    "dvs_intro": "PyRetina/slide2.png",  # 对应PPT第二张：DVS仿生原理
+    "rgb_intro": "slide1.png",  # 对应PPT第一张：传统RGB缺陷
+    "dvs_intro": "slide2.png",  # 对应PPT第二张：DVS仿生原理
     "cover_bg": "cover_placeholder.png" # 封面图（可选，代码里有兜底逻辑）
 }
 
@@ -398,7 +398,7 @@ class IntroWindow(QWidget):
             # 按钮逻辑
             self.btn_back.show()
             if self.current_step == 3:
-                self.btn_next.setText("Launch System 🚀")
+                self.btn_next.setText("Launch System ")
                 self.btn_next.setStyleSheet("""
                     QPushButton#PrimaryBtn {
                         background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #10b981, stop:1 #059669);

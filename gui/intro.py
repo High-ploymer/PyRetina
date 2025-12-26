@@ -7,11 +7,15 @@ from PyQt6.QtCore import Qt, pyqtSignal, QSize, QPropertyAnimation, QEasingCurve
 from PyQt6.QtGui import QPixmap, QColor, QPalette, QBrush, QLinearGradient, QFont, QIcon
 
 # ================= 配置区域 =================
-# 请将你的图片路径填入此处，或者将图片重命名为对应的名字
+# 1. 获取当前脚本 (intro.py) 所在的绝对路径: .../PyRetina/gui
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# 2. 获取上一级目录 (即项目根目录): .../PyRetina
+project_root = os.path.dirname(current_dir)
+# 3. 拼接正确的图片路径
 IMAGE_MAP = {
-    "rgb_intro": "slide1.png",  # 对应PPT第一张：传统RGB缺陷
-    "dvs_intro": "slide2.png",  # 对应PPT第二张：DVS仿生原理
-    "cover_bg": "cover_placeholder.png" # 封面图（可选，代码里有兜底逻辑）
+    # 自动生成: .../PyRetina/slide1.png
+    "rgb_intro": os.path.join(project_root, "slide1.png"),
+    "dvs_intro": os.path.join(project_root, "slide2.png"), 
 }
 
 # ================= 样式表 (QSS) =================
